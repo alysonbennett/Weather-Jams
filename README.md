@@ -34,14 +34,14 @@ THEN the page theme alters to reflect such weather/genre/mood
 
 ## API's We Will Use
 Open Weather Map
-<!-- Music App TBD -->
+YouTube
 
 ## Rough Breakdown of Tasks
 Front End Design:
-Kelsey, Ronnie
+Kelsey, Ronnie, Alyson
 
 Back End Coding:
-Paris
+Paris, Jackson, Stephen
 
 
 
