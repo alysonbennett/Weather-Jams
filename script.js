@@ -1,13 +1,4 @@
 let today = moment().format("dddd, MMMM D, YYYY");
-let tomorrow = moment(new Date())
-  .add(1, "days")
-  .format("dddd");
-let dayAfterTomorrow = moment(new Date())
-  .add(2, "days")
-  .format("dddd");
-let twoDaysAfterTomorrow = moment(new Date())
-  .add(3, "days")
-  .format("dddd");
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -16,6 +7,9 @@ function handleSubmit(event) {
 }
 
 function showCurrentWeather(response) {
+  console.log(response)
+  var condition = response.data.weather[0].main;
+  // setIcon(condition);
   let currentTemperature = document.querySelector("#currentTemperature");
   currentTemperature.innerHTML = "Temperature: " + `${Math.round(response.data.main.temp * 1.8) + 32}°F`;
 
@@ -34,11 +28,7 @@ function showCurrentWeather(response) {
   let displayCurrentDate = document.querySelector("#currentDate");
   displayCurrentDate.innerHTML = `${today}`;
 
-  let iconCurrentWeather = document.querySelector("#iconCurrentWeather");
-  iconCurrentWeather.setAttribute(
-    "src",
-    "http://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png"
-  );
+  setIcon(condition);
 
   const types = [
     "Clear",
@@ -46,7 +36,8 @@ function showCurrentWeather(response) {
     "Rain",
     "Clouds",
     "Atmosphere",
-    "Thunderstorm"
+    "Thunderstorm",
+    "Snow"
   ];
   types.forEach(type => {
     const musicType = `music${type}`;
@@ -58,67 +49,52 @@ function showCurrentWeather(response) {
   });
 }
 
-function showForecast(response) {
-  console.log(response.data);
-  let displayTomorrow = document.querySelector("#tomorrow");
-  displayTomorrow.innerHTML = `${tomorrow}`;
-  let iconTomorrowWeather = document.querySelector("#iconTomorrowWeather");
-  iconTomorrowWeather.setAttribute(
-    "src",
-    "http://openweathermap.org/img/w/" +
-      response.data.list[7].weather[0].icon +
-      ".png"
-  );
-  let tomorrowTemperature = document.querySelector("#tomorrowTemperature");
-  tomorrowTemperature.innerHTML = `${Math.round(
-    response.data.list[7].main.temp
-  )}°C`;
+function setIcon (condition) {
 
-  let displayDayAfterTomorrow = document.querySelector("#dayAfterTomorrow");
-  displayDayAfterTomorrow.innerHTML = `${dayAfterTomorrow}`;
-  let iconDayAfterTomorrowWeather = document.querySelector(
-    "#iconDayAfterTomorrowWeather"
-  );
-  iconDayAfterTomorrowWeather.setAttribute(
-    "src",
-    "http://openweathermap.org/img/w/" +
-      response.data.list[15].weather[0].icon +
-      ".png"
-  );
-  let dayAfterTomorrowTemperature = document.querySelector(
-    "#dayAfterTomorrowTemperature"
-  );
-  dayAfterTomorrowTemperature.innerHTML = `${Math.round(
-    response.data.list[15].main.temp
-  )}°C`;
+  // console.log("response" + response)
+  // let icon = document.getElementById("iconCurrentWeather")
 
-  let displayTwoDaysAfterTomorrow = document.querySelector(
-    "#twoDaysAfterTomorrow"
-  );
-  displayTwoDaysAfterTomorrow.innerHTML = `${twoDaysAfterTomorrow}`;
-  let iconTwoDaysAfterTomorrowWeather = document.querySelector(
-    "#iconTwoDaysAfterTomorrowWeather"
-  );
-  iconTwoDaysAfterTomorrowWeather.setAttribute(
-    "src",
-    "http://openweathermap.org/img/w/" +
-      response.data.list[23].weather[0].icon +
-      ".png"
-  );
-  let twoDaysAfterTomorrowTemperature = document.querySelector(
-    "#twoDaysAfterTomorrowTemperature"
-  );
-  twoDaysAfterTomorrowTemperature.innerHTML = `${Math.round(
-    response.data.list[23].main.temp
-  )}°C`;
+  if (condition === "Clear") {
+  document.getElementById("icon sunny").classList.remove("hide");
+  document.getElementById("intro").classList.add("hide");
+
+  }
+
+  if (condition === "Clouds") {
+  document.getElementById("icon cloudy").classList.remove("hide");
+  document.getElementById("intro").classList.add("hide");
+
+  console.log("condition=" + condition)
 }
+  if (condition === "Snow") { 
+  document.getElementById("icon flurries").classList.remove("hide");
+  document.getElementById("intro").classList.add("hide");
+
+}
+  if (condition === "Rain") {
+  document.getElementById("icon rainy").classList.remove("hide");
+  document.getElementById("intro").classList.add("hide");
+
+}
+  if (condition === "Thunderstorm") {
+  document.getElementById("icon thunder-storm").classList.remove("hide");
+  document.getElementById("intro").classList.add("hide");
+
+}
+  if (condition === "Drizzle") {
+  document.getElementById("icon sun-shower").classList.remove("hide");
+  document.getElementById("intro").classList.add("hide");
+
+}
+  // if (condition === "Atmosphere") {
+  // document.querySelector("icon foggy").classList.remove("hide");}
+
+};
 
 function search(city) {
   let apiKey = "9b41700e7dcfb48ddf3be545946f91cc";
   let urlCurrentCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(urlCurrentCity).then(showCurrentWeather);
-  let urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(urlForecast).then(showForecast);
 }
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
@@ -151,8 +127,6 @@ function displayCurrentWeatherCurrentLocation() {
     let apiKey = "9b41700e7dcfb48ddf3be545946f91cc";
     let urlCurrentGPS = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(urlCurrentGPS).then(showCurrentWeather);
-    let urlForecastGPS = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-    axios.get(urlForecastGPS).then(showForecast);
   }
   navigator.geolocation.getCurrentPosition(newPosition);
 }
@@ -160,10 +134,16 @@ function displayCurrentWeatherCurrentLocation() {
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", displayCurrentWeatherCurrentLocation);
 
-const reloadtButton = document.querySelector("#reload");
+
+
+const reloadButton = document.querySelector("#reload");
 // Reload everything:
 function reload() {
     reload = location.reload();
 }
 // Event listeners for reload
 reloadButton.addEventListener("click", reload, false);
+
+
+
+

@@ -3,6 +3,10 @@
 
 }
 
+.hide {
+  display: none;
+}
+
 .title {
   text-align: center;
   font-size: 30px;
@@ -13,11 +17,6 @@
   border-radius: 7px;
 }
 
-html { box-sizing: border-box; }
-html *,
-html *:before,
-html *:after { box-sizing: inherit; }
-
 body {
   max-width: 42em;
   padding: 2em;
@@ -27,6 +26,32 @@ body {
   text-align: center;
   background-color: #bbbbbb;
 }
+h1 {
+  margin-bottom: 1.375em;
+  color: #fff;
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+p,
+a {
+  color: #FFFFFF;
+  font-size: small;
+}
+p { margin: 1.375rem 0; }
+
+.icon {
+  /* position: relative; */
+  /* display: inline-block; */
+  width: 12em;
+  height: 10em;
+  /* font-size: 1em; control icon size here */
+  margin: 25px;
+}
+html { box-sizing: border-box; }
+html *,
+html *:before,
+html *:after { box-sizing: inherit; }
 
 h2#place {
   color: black;
@@ -56,35 +81,13 @@ div#wind {
   color: black;
 }
 
-
+div#icon {
+  margin: 10px;
+}
 button.button.is-light.is-small {
   background-color: 	#002e6d;
   color: white;
   border-radius: 5px;
-}
-
-  
-
-h1 {
-  margin-bottom: 1.375em;
-  color: #fff;
-  font-weight: 100;
-  font-size: 2em;
-  text-transform: uppercase;
-}
-p,
-a {
-  color: #FFFFFF;
-  font-size: small;
-}
-p { margin: 1.375rem 0; }
-
-.icon {
-  position: relative;
-  display: inline-block;
-  width: 12em;
-  height: 10em;
-  font-size: 1em; /* control icon size here */
 }
 
 .cloud {
@@ -293,6 +296,34 @@ p { margin: 1.375rem 0; }
   animation: spin 16s linear infinite reverse;
 }
 
+.fog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 1.75em 0 0 0;
+}
+
+.fog::before,
+.fog::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 5em;
+  height: 0.5em;
+  margin-left: -2.5em;
+  color: rgba(255,255,255,0.25);
+  background: currentColor;
+  border-radius: 0.5em;
+  animation: fog 6s infinite linear alternate;
+}
+
+.fog::before { top: 0.75em; }
+
+.fog::after {
+  top: 1.5em;
+  animation-delay: -6s;
+}
+
 
 /* Animations */ 
 
@@ -376,12 +407,6 @@ p { margin: 1.375rem 0; }
   display: none;
 }
 
-
-
-html { box-sizing: border-box; }
-html *,
-html *:before,
-html *:after { box-sizing: inherit; }
 
 
 
