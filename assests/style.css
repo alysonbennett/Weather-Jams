@@ -79,6 +79,17 @@ a {
 }
 p { margin: 1.375rem 0; }
 
+
+.footer {
+  background-color: #bbbbbb;
+}
+
+.pfooter {
+  color: black;
+  font-size: 15px;
+}
+
+
 .icon {
   position: relative;
   display: inline-block;
