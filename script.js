@@ -1,3 +1,5 @@
+
+
 let today = moment().format("dddd, MMMM D, YYYY");
 
 function handleSubmit(event) {
@@ -47,7 +49,12 @@ function showCurrentWeather(response) {
       document.getElementById(musicType).style.display = "none";
     }
   });
-}
+};
+
+// function experiment () {
+//   $('#experiment').append(<div class=".cloud"></div>);
+
+// }
 
 function setIcon (condition) {
 
@@ -57,13 +64,14 @@ function setIcon (condition) {
   if (condition === "Clear") {
   document.getElementById("icon sunny").classList.remove("hide");
   document.getElementById("intro").classList.add("hide");
+  
 
   }
 
   if (condition === "Clouds") {
   document.getElementById("icon cloudy").classList.remove("hide");
   document.getElementById("intro").classList.add("hide");
-
+  // document.getElementById("body").style.backgroundImage = "url('https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv')";
   console.log("condition=" + condition)
 }
   if (condition === "Snow") { 
@@ -72,6 +80,7 @@ function setIcon (condition) {
 
 }
   if (condition === "Rain") {
+  document.getElementById("intro").classList.add("hide");  
   document.getElementById("icon rainy").classList.remove("hide");
   document.getElementById("intro").classList.add("hide");
 
@@ -144,6 +153,7 @@ function reload() {
 // Event listeners for reload
 reloadButton.addEventListener("click", reload, false);
 
-
-
-
+var div = document.createElement('div')
+function experiment () {
+  document.getElementById('experiment').appendChild(div);
+  div.className = 'cloud'; };

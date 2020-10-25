@@ -90,8 +90,6 @@ button.button.is-light.is-small {
   border-radius: 5px;
 }
 
-<<<<<<< HEAD
-=======
 button {
   margin-top: 5px;
 }
@@ -128,7 +126,6 @@ p { margin: 1.375rem 0; }
   font-size: 1em; /* control icon size here */
 }
 
->>>>>>> 1222d781f4cd6c866ef933281ec3d731dcdad2de
 .cloud {
   position: absolute;
   z-index: 1;
@@ -228,7 +225,7 @@ p { margin: 1.375rem 0; }
   width: 3.75em;
   height: 3.75em;
   margin: 0.375em 0 0 -2em;
-  background: currentColor;
+  background: transparent;
 }
 
 .rain:after {
