@@ -3,6 +3,10 @@
 
 }
 
+html {
+  background-color: #bbbbbb;
+}
+
 .title {
   text-align: center;
   font-size: 30px;
@@ -63,7 +67,9 @@ button.button.is-light.is-small {
   border-radius: 5px;
 }
 
-  
+button {
+  margin-top: 5px;
+}
 
 h1 {
   margin-bottom: 1.375em;
@@ -88,7 +94,6 @@ p { margin: 1.375rem 0; }
   color: black;
   font-size: 15px;
 }
-
 
 .icon {
   position: relative;
