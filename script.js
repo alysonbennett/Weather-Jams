@@ -77,7 +77,7 @@ function setIcon (condition) {
                 '</div>';
   $("#iconCurrentWeather").empty().append(cloudy);
   console.log("condition=" + condition);
-  $("body").removeClass().addClass("cloudybg")
+  $("body").removeClass().addClass("cloudybg") 
 }
 
   if (condition === "Snow") { 
@@ -129,8 +129,8 @@ function setIcon (condition) {
               '</div>';
 
   $( "#iconCurrentWeather" ).empty().append(shower) 
-
-
+  console.log("condition=" + condition); 
+  $("body").removeClass().addClass("showery") 
 }
   if (condition === "Mist") {
   var fog = '<div class="icon foggy">' +
