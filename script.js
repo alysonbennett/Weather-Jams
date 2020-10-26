@@ -1,4 +1,4 @@
-
+var gifKey = "EpDzh9Dsr3OzGQ5SJOd1EIPs3Y36wth1"
 
 let today = moment().format("dddd, MMMM D, YYYY");
 
@@ -52,33 +52,36 @@ function showCurrentWeather(response) {
 };
 
 
- 
+// SETTING ICON AND BACKGROUND==========================//////////////////
 
 function setIcon (condition) { 
 
   if (condition === "Clear") {
-  document.getElementById("intro").classList.add("hide");
+  // document.getElementById("intro").classList.add("hide");
   var sun = '<div class="icon sunny">' +
           '<div class="sun">' +
           '<div class="rays"></div>' +
            '</div>' +
            '</div>';
 
-$( "#iconCurrentWeather" ).empty().append(sun);
+  $( "#iconCurrentWeather" ).empty().append(sun);
+  console.log("condition=" + condition);
+  $("body").removeClass().addClass("sunnybg")
 }
 
   if (condition === "Clouds") {
-  document.getElementById("intro").classList.add("hide");
+  // document.getElementById("intro").classList.add("hide");
   var cloudy = '<div id="icon cloudy">' +
                 '<div class="cloud"></div>'+
                 '<div class="cloud"></div>'+
                 '</div>';
   $("#iconCurrentWeather").empty().append(cloudy);
   console.log("condition=" + condition);
-  document.body.style.background = "url('https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv')";
+  $("body").removeClass().addClass("cloudybg")
 }
+
   if (condition === "Snow") { 
-  document.getElementById("intro").classList.add("hide");
+  // document.getElementById("intro").classList.add("hide");
   var snow = '<div class="icon flurries">' +
             '<div class="cloud"></div>' +
             '<div class="snow">' +
@@ -87,19 +90,22 @@ $( "#iconCurrentWeather" ).empty().append(sun);
             '</div>' +
             '</div>';
 
-  $( "#iconCurrentWeather" ).empty().append(snow)   
+  $( "#iconCurrentWeather" ).empty().append(snow); 
+  console.log("condition=" + condition);
+  $("body").removeClass().addClass("snowybg")  
 }
   if (condition === "Rain") {
-  document.getElementById("intro").classList.add("hide"); 
+  // document.getElementById("intro").classList.add("hide"); 
   var rain = '<div class="icon rainy">' +  
             '<div class="cloud"></div>' +  
             '<div class="rain"></div>' +
             '</div>';
 
-$( "#iconCurrentWeather" ).empty().append(rain) 
+  $( "#iconCurrentWeather" ).empty().append(rain); 
+  console.log("condition=" + condition);
+  $("body").removeClass().addClass("rainybg")
 }
   if (condition === "Thunderstorm") { 
-  document.getElementById("intro").classList.add("hide");
   var storm = '<div class="icon thunder-storm">' + 
              '<div class="cloud"></div>' +
              '<div class="lightning">' +
@@ -108,11 +114,12 @@ $( "#iconCurrentWeather" ).empty().append(rain)
               '</div>' +
               '</div>';
 
-  $( "#iconCurrentWeather" ).empty().append(storm)  
-
+  $( "#iconCurrentWeather" ).empty().append(storm);
+  console.log("condition=" + condition);
+  $("body").removeClass().addClass("stormybg")
 }
+
   if (condition === "Drizzle") {
-  document.getElementById("intro").classList.add("hide");
   var shower = '<div class="icon sun-shower">' +
              '<div class="cloud"></div>' +
               '<div class="sun">' +
@@ -121,17 +128,19 @@ $( "#iconCurrentWeather" ).empty().append(rain)
               '<div class="rain"></div>' +
               '</div>';
 
-$( "#iconCurrentWeather" ).empty().append(shower)  
+  $( "#iconCurrentWeather" ).empty().append(shower) 
+
 
 }
-  if (condition === "Atmosphere") {
-  document.querySelector("icon foggy").classList.remove("hide");
+  if (condition === "Mist") {
   var fog = '<div class="icon foggy">' +
            '<div class="cloud"></div>' +
            '<div class="fog"></div>' +
            '</div>';
 
-  $( "#iconCurrentWeather" ).empty().append(fog) 
+  $( "#iconCurrentWeather" ).empty().append(fog);
+  console.log("condition=" + condition); 
+  $("body").removeClass().addClass("fogmist") 
 }
   
 };

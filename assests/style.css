@@ -1,6 +1,7 @@
 * {
   font-family: 'Fira Sans Condensed', sans-serif; 
-
+  color: #fff;
+  /* background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv"); */
 }
 
 .hide {
@@ -18,13 +19,45 @@
 }
 
 body {
-  max-width: 42em;
   padding: 2em;
   margin: 0 auto;
   color:#FFFFFF;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  background-color: #bbbbbb;
+  
+}
+.boddy {
+  /* background-color: #bbbbbb;
+  opacity: 0.5; */
+  background-color:rgba(0, 0, 0, 0.7)
+
+}
+
+.cloudybg {
+  background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv");
+  background-size: cover;
+}
+
+.snowybg {
+  background-image: url("https://64.media.tumblr.com/tumblr_m92lu1fvYU1rt04f0o1_400.gifv");
+  background-size: cover;
+}
+.rainybg {
+  background-image: url("https://media2.giphy.com/media/l3vRbNFMuFt5Zm372/giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.fogmist {
+  background-image: url("https://media3.giphy.com/media/3og0IEX4WDuOggvpS0/giphy.gif");
+  background-size: cover;
+}
+.sunnybg {
+  background-image: url("https://media.giphy.com/media/QwtMHd2Z8dlb5FFIdq/giphy.gif");
+  background-size: cover;
+}
+.stormybg {
+  background-image: url("https://media.giphy.com/media/CIYF0RVOmd2qQ/giphy.gif");
+  background-size: cover;
 }
 h1 {
   margin-bottom: 1.375em;
@@ -46,7 +79,7 @@ p { margin: 1.375rem 0; }
   width: 12em;
   height: 10em;
   /* font-size: 1em; control icon size here */
-  margin: 25px;
+  /* margin: 25px; */
 }
 html { box-sizing: border-box; }
 html *,
@@ -110,7 +143,8 @@ p { margin: 1.375rem 0; }
 
 
 .footer {
-  background-color: #bbbbbb;
+  background-color:darkgrey;
+  max-height: min-content;
 }
 
 .pfooter {
@@ -176,7 +210,7 @@ p { margin: 1.375rem 0; }
   width: 2.5em;
   height: 2.5em;
   margin: -1.25em;
-  background: currentColor;
+  background: transparent;
   border-radius: 50%;
   box-shadow: 0 0 0 0.375em #fff;
   animation: spin 12s infinite linear;
@@ -421,6 +455,11 @@ p { margin: 1.375rem 0; }
     background: #fff;
     opacity: 0.2;
   }
+}
+
+@keyframes fog {
+  0% { transform: translateX(-0.5em); }
+  100% { transform: translateX(0.5em); }
 }
 
 
