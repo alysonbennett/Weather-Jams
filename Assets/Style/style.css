@@ -156,7 +156,8 @@ p { margin: 1.375rem 0; }
 /*Footer*/
 .footer {
   background-color:rgba(0, 0, 0, 0.7);
-  max-height: min-content;
+  max-height: 20px;
+  
 }
 
 .pfooter {
