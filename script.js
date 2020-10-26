@@ -51,53 +51,89 @@ function showCurrentWeather(response) {
   });
 };
 
-// function experiment () {
-//   $('#experiment').append(<div class=".cloud"></div>);
 
-// }
+ 
 
-function setIcon (condition) {
-
-  // console.log("response" + response)
-  // let icon = document.getElementById("iconCurrentWeather")
+function setIcon (condition) { 
 
   if (condition === "Clear") {
-  document.getElementById("icon sunny").classList.remove("hide");
   document.getElementById("intro").classList.add("hide");
-  
+  var sun = '<div class="icon sunny">' +
+          '<div class="sun">' +
+          '<div class="rays"></div>' +
+           '</div>' +
+           '</div>';
 
-  }
+$( "#iconCurrentWeather" ).empty().append(sun);
+}
 
   if (condition === "Clouds") {
-  document.getElementById("icon cloudy").classList.remove("hide");
   document.getElementById("intro").classList.add("hide");
-  // document.getElementById("body").style.backgroundImage = "url('https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv')";
-  console.log("condition=" + condition)
+  var cloudy = '<div id="icon cloudy">' +
+                '<div class="cloud"></div>'+
+                '<div class="cloud"></div>'+
+                '</div>';
+  $("#iconCurrentWeather").empty().append(cloudy);
+  console.log("condition=" + condition);
+  document.body.style.background = "url('https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv')";
 }
   if (condition === "Snow") { 
-  document.getElementById("icon flurries").classList.remove("hide");
   document.getElementById("intro").classList.add("hide");
+  var snow = '<div class="icon flurries">' +
+            '<div class="cloud"></div>' +
+            '<div class="snow">' +
+            '<div class="flake"></div>' +
+            '<div class="flake"></div>' +
+            '</div>' +
+            '</div>';
 
+  $( "#iconCurrentWeather" ).empty().append(snow)   
 }
   if (condition === "Rain") {
-  document.getElementById("intro").classList.add("hide");  
-  document.getElementById("icon rainy").classList.remove("hide");
-  document.getElementById("intro").classList.add("hide");
+  document.getElementById("intro").classList.add("hide"); 
+  var rain = '<div class="icon rainy">' +  
+            '<div class="cloud"></div>' +  
+            '<div class="rain"></div>' +
+            '</div>';
 
+$( "#iconCurrentWeather" ).empty().append(rain) 
 }
-  if (condition === "Thunderstorm") {
-  document.getElementById("icon thunder-storm").classList.remove("hide");
+  if (condition === "Thunderstorm") { 
   document.getElementById("intro").classList.add("hide");
+  var storm = '<div class="icon thunder-storm">' + 
+             '<div class="cloud"></div>' +
+             '<div class="lightning">' +
+              '<div class="bolt"></div>' +
+              '<div class="bolt"></div>' +
+              '</div>' +
+              '</div>';
+
+  $( "#iconCurrentWeather" ).empty().append(storm)  
 
 }
   if (condition === "Drizzle") {
-  document.getElementById("icon sun-shower").classList.remove("hide");
   document.getElementById("intro").classList.add("hide");
+  var shower = '<div class="icon sun-shower">' +
+             '<div class="cloud"></div>' +
+              '<div class="sun">' +
+              '<div class="rays"></div>' +
+               '</div>' +
+              '<div class="rain"></div>' +
+              '</div>';
+
+$( "#iconCurrentWeather" ).empty().append(shower)  
 
 }
-  // if (condition === "Atmosphere") {
-  // document.querySelector("icon foggy").classList.remove("hide");}
+  if (condition === "Atmosphere") {
+  document.querySelector("icon foggy").classList.remove("hide");
+  var fog = '<div class="icon foggy">' +
+           '<div class="cloud"></div>' +
+           '<div class="fog"></div>' +
+           '</div>';
 
+  $( "#iconCurrentWeather" ).empty().append(fog) 
+}
+  
 };
 
 function search(city) {
@@ -107,6 +143,7 @@ function search(city) {
 }
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
+
 
 function displayCurrentWeatherCurrentLocation() {
   function showWeatherCurrentLocation(response) {
@@ -153,7 +190,5 @@ function reload() {
 // Event listeners for reload
 reloadButton.addEventListener("click", reload, false);
 
-var div = document.createElement('div')
-function experiment () {
-  document.getElementById('experiment').appendChild(div);
-  div.className = 'cloud'; };
+
+  
