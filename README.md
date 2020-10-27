@@ -1,11 +1,16 @@
-## Weather Jams Project
+## Weather Jams - Project 1
 
-* Kelsey Busser
 * Alyson Bennett
-* Jackson Smith
+* Kelsey Busser
 * Ronnie Cromer
-* Stephen Ross
 * Paris Plain
+* Stephen Ross
+* Jackson Smith
+
+## Deployed Application Links and GitHub Repository
+
+* [Link to deployed application](https://alysonbennett.github.io/Weather-Jams/)
+* [Link to GitHub Repository](https://github.com/alysonbennett/Weather-Jams)
 
 ## User Story
 
@@ -21,65 +26,50 @@
 * WHEN the weather conditions are retrieved and displayed
 * THEN I am provided with a customized playlist based on the current conditions
 
-## Wireframe
-<!-- [Image of what site will look like] -->
+## APIs Used
 
-## API's We Will Use
 * Open Weather Map
 * Soundcloud
 
 ## Rough Breakdown of Tasks
+
 Front End Design:
 Kelsey, Ronnie, Alyson
 
 Back End Coding:
 Paris, Jackson, Stephen
 
-## Application Requirements
-* Must use at least two server-side APIs
+## Process
 
-* Must use a CSS framework _other than_ Bootstrap
+We started this project with brainstorming ideas for what we would want our application to do, and how users would interact with it. After deciding on a type of app that would provide a playlist based on the users current weather conditions, we began searching for APIs that would fit this criteria. We also began sketching how we want the app to look, and searched for a CSS framework other than Bootstrap that would fit our needs.
 
-* Must be interactive (i.e: accept and respond to user input)
+The first hurdle was finding a music API that didn't require authentication or tokens, which turned out to be the most difficult step of the process. We landed on using SoundCloud, which allowed us to insert pre-made playlists based on keywords provided by the weather API.
 
-* Use at least one new third-party API
+We decided to use the OpenWeatherMap API which would give us defined parameters needed to pull playlists from SoundCloud. 
 
-* Must have a polished UI
+Within the app, we would need a button to find the users current location, as well as an input box for the user to search for a location if desired. We also needed to create containers for the weather information and the SoundCloud playlists. In addition, we found some animated icons that represented the current weather conditions that we felt would add a more modern look to the app. And to up the appearance just a bit more, we added animated background images that also reflects the users current weather conditions.
 
-* Must meet good quality coding standards
+## Screen Shots of Final Application
 
-* Does not use alerts, confirms or prompts (look into _modals_)
+This is what the user will first see when opening the application:
 
-* Must be deployed to GitHub Pages
+![Landing Page](Assets/Images/ScreenShots/LandingPage.png)
 
-## Presentation Requirements
-* Elevator pitch: a one minute description of your application
+This is what shows after the user either allows current location or searches for a location: 
+![Searched Location](Assets/Images/ScreenShots/SearchedCity.png)
 
-* Concept: What is your user story? What was your motivation for development?
+## Final Thoughts
 
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+This was a challenging project, particularly in selecting and working with an appropriate music API. Our group collaboratively using Repl.It, then moved to using GitHub to push and pull changes. It was also difficult inserting the animated icons, however, we feel that it steps up the application to look more professional.
 
-* Demo: Show it off!
+Overall, we are happy with the deployed application. We worked well together and were able to push through difficulties as a group. We all learned a lot along the way and feel more comfortable taking these skills beyond the classroom.
 
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository
-
-## Grading Metrics 
-
-| Metric        | Weight | 
-| ---           | ---    |
-| Concept       | 10%    |
-| Design        | 20%    |
-| Functionality | 30%    |
-| Collaboration | 30%    |
-| Presentation  | 10%    |
+## Future Development
 
 
-## Submission on BCS
 
-You are required to submit the following:
 
-* The URL of the deployed application
 
-* The URL of the GitHub repository
+
+
+
