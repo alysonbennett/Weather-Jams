@@ -25,6 +25,7 @@ body {
   color:#FFFFFF;
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  background-size: cover;
   
 }
 .body {
@@ -42,7 +43,7 @@ body {
   background-size: cover;
   
 }
-.cloudybg {
+/* .cloudybg {
   background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv");
   background-size: cover;
 }
@@ -67,7 +68,7 @@ body {
 .stormybg {
   background-image: url("https://media.giphy.com/media/CIYF0RVOmd2qQ/giphy.gif");
   background-size: cover;
-}
+} */
 
 /*Search functions*/
 h1 {

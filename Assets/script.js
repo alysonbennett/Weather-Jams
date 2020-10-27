@@ -1,5 +1,4 @@
-var gifKey = "EpDzh9Dsr3OzGQ5SJOd1EIPs3Y36wth1"
-
+//FUNCTION FOR CALLING AND GENERATING QUOTES/////
 $("#sub").click(function() {
   $("#intro").hide();
   $("#quote").empty();
@@ -13,6 +12,7 @@ $("#sub").click(function() {
   
   var obj = data[ Math.floor(Math.random() * data.length) ];
   console.log(obj.text, obj.author)
+  //QUOTES BUILT DYNAMICALLY===============================
   var quoteDiv = document.createElement("div")
   quoteDiv.innerHTML = obj.text;
   $("#quote").append(quoteDiv);
@@ -30,6 +30,8 @@ function handleSubmit(event) {
   search(keyword.value);
 }
 
+//======THIS PULLS WEATHER CONDITIONS AS WELL AS SETS BACKGROUND BASED ON CONDITIONS
+//GIPHY IS FED 'Q' BY OPENWEATHERMAP THROUGH VAR CONDITION
 function showCurrentWeather(response) {
   console.log(response)
   var condition = response.data.weather[0].main;
@@ -40,6 +42,7 @@ function showCurrentWeather(response) {
   let place = document.querySelector("#place");
   place.innerHTML = response.data.name;
 
+  var details = response.data.weather[0].description;
   let weatherDescription = document.querySelector("#weatherDescription");
   weatherDescription.innerHTML = "Condition: " + response.data.weather[0].description;
 
@@ -53,6 +56,32 @@ function showCurrentWeather(response) {
   displayCurrentDate.innerHTML = `${today}`;
 
   setIcon(condition);
+  setBackground(details)
+
+  //GIPHY API CALL HERE
+  function setBackground() {
+
+    // Storing our giphy API URL for a random cat image
+    var api = 'http://api.giphy.com/v1/gifs/search?q=weather+nature+';
+    var limit = '&limit=24';
+    var userInput = condition
+    var key = '&api_key=EpDzh9Dsr3OzGQ5SJOd1EIPs3Y36wth1';
+    var queryURL = api + userInput + key + limit /*+ rating */;
+    console.log(queryURL)
+
+    // Perfoming an AJAX GET request to our queryURL
+    $.ajax({url: queryURL, method: 'GET'}).done(function(response){
+
+// This is the API response data. It's a JSON object of 24 gifs
+
+var dada = (response.data)
+console.log(dada)
+var weatherBg = (dada[ Math.floor(Math.random() * dada.length) ]);
+var switchBG = (weatherBg.images.original.url);
+$("body").css("background-image", `url(${switchBG})`);
+
+
+});}
 
 }
 
