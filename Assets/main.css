@@ -1,13 +1,17 @@
+/*All*/
+
 * {
   font-family: 'Fira Sans Condensed', sans-serif; 
   color: #fff;
   /* background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv"); */
 }
 
+/*Hiding icons and playlist*/
 .hide {
   display: none;
 }
 
+/*Weather Jams Heading*/
 .title {
   text-align: center;
   font-size: 30px;
@@ -18,6 +22,8 @@
   border-radius: 7px;
 }
 
+/*Body*/
+
 body {
   padding: 2em;
   margin: 0 auto;
@@ -26,13 +32,19 @@ body {
   text-align: center;
   
 }
+<<<<<<< HEAD:assests/style.css
 .main {
+=======
+.body {
+>>>>>>> bc6b198d4051a48ad3b764b4c9c0b8013a374738:Assets/main.css
   /* background-color: #bbbbbb;
   opacity: 0.5; */
-  background-color:rgba(0, 0, 0, 0.7)
+  background-color:rgba(0, 0, 0, 0.7);
 
 }
 
+
+/*Backgrounds*/
 .cloudybg {
   background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv");
   background-size: cover;
@@ -59,10 +71,15 @@ body {
   background-image: url("https://media.giphy.com/media/CIYF0RVOmd2qQ/giphy.gif");
   background-size: cover;
 }
+<<<<<<< HEAD:assests/style.css
 .showery {
   background-image: url("https://media.giphy.com/media/DZ4NRqp5YdETm/giphy.gif");
   background-size: cover;
 }
+=======
+
+/*Search functions*/
+>>>>>>> bc6b198d4051a48ad3b764b4c9c0b8013a374738:Assets/main.css
 h1 {
   margin-bottom: 1.375em;
   color: #fff;
@@ -121,6 +138,8 @@ div#wind {
 div#icon {
   margin: 10px;
 }
+
+/*Search buttons*/
 button.button.is-light.is-small {
   background-color: 	#002e6d;
   color: white;
@@ -145,10 +164,15 @@ a {
 }
 p { margin: 1.375rem 0; }
 
-
+/*Footer*/
 .footer {
   background-color:rgba(0, 0, 0, 0.7);
+<<<<<<< HEAD:assests/style.css
   max-height: min-content;
+=======
+  max-height: 20px;
+  
+>>>>>>> bc6b198d4051a48ad3b764b4c9c0b8013a374738:Assets/main.css
 }
 
 .pfooter {
@@ -156,6 +180,8 @@ p { margin: 1.375rem 0; }
   font-size: 15px;
 }
 
+
+/*Animated icons*/
 .icon {
   position: relative;
   display: inline-block;
