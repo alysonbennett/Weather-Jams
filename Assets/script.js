@@ -62,7 +62,7 @@ function showCurrentWeather(response) {
   function setBackground() {
 
     
-    var api = 'http://api.giphy.com/v1/gifs/search?q=weather+nature+';
+    var api = 'https://api.giphy.com/v1/gifs/search?q=weather+nature+';
     var limit = '&limit=24';
     var userInput = condition
     var key = '&api_key=EpDzh9Dsr3OzGQ5SJOd1EIPs3Y36wth1';
