@@ -35,7 +35,7 @@ function handleSubmit(event) {
 function showCurrentWeather(response) {
   console.log(response)
   var condition = response.data.weather[0].main;
-  // setIcon(condition);
+  
   let currentTemperature = document.querySelector("#currentTemperature");
   currentTemperature.innerHTML = "Temperature: " + `${Math.round(response.data.main.temp * 1.8) + 32}°F`;
 
@@ -58,10 +58,10 @@ function showCurrentWeather(response) {
   setIcon(condition);
   setBackground(details)
 
-  //GIPHY API CALL HERE
+  //GIPHY API CALL
   function setBackground() {
 
-    // Storing our giphy API URL for a random cat image
+    
     var api = 'http://api.giphy.com/v1/gifs/search?q=weather+nature+';
     var limit = '&limit=24';
     var userInput = condition

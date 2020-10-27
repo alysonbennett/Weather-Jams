@@ -1,4 +1,4 @@
-// SETTING ICON AND BACKGROUND==========================//////////////////
+// SETTING ICON AND MUSIC BASED ON WEATHER CONDITIONS==========================//////////////////
 
 function setIcon (condition) { 
 
@@ -10,8 +10,6 @@ function setIcon (condition) {
              '</div>';
   
     $( "#iconCurrentWeather" ).empty().append(sun);
-    console.log("condition=" + condition);
-    // $("body").removeClass().addClass("sunnybg");
     $("#moosicPlayer").empty().append('<iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/485070210&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>');
   
   }
@@ -22,8 +20,6 @@ function setIcon (condition) {
                   '<div class="cloud"></div>'+
                   '</div>';
     $("#iconCurrentWeather").empty().append(cloudy);
-    console.log("condition=" + condition);
-    // $("body").removeClass().addClass("cloudybg"); 
     $("#moosicPlayer").empty().append('<iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/30705522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>');
   }
   
@@ -37,8 +33,6 @@ function setIcon (condition) {
               '</div>';
   
     $( "#iconCurrentWeather" ).empty().append(snow); 
-    console.log("condition=" + condition);
-    // $("body").removeClass().addClass("snowybg");  
     $("#moosicPlayer").empty().append('<iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/170096941&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>');
   
   }
@@ -49,8 +43,6 @@ function setIcon (condition) {
               '</div>';
   
     $( "#iconCurrentWeather" ).empty().append(rain); 
-    console.log("condition=" + condition);
-    // $("body").removeClass().addClass("rainybg");
     $("#moosicPlayer").empty().append('<iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/415701590&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>');
   }
     if (condition === "Thunderstorm") { 
@@ -63,8 +55,6 @@ function setIcon (condition) {
                 '</div>';
   
     $( "#iconCurrentWeather" ).empty().append(storm);
-    console.log("condition=" + condition);
-    // $("body").removeClass().addClass("stormybg");
     $("#moosicPlayer").empty().append('<iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/787002831&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>');
   }
   
@@ -78,8 +68,6 @@ function setIcon (condition) {
                 '</div>';
   
     $( "#iconCurrentWeather" ).empty().append(shower) 
-    console.log("condition=" + condition); 
-    // $("body").removeClass().addClass("showery");
     $("#moosicPlayer").empty().append('<iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1148320699&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>');
   }
     if (condition === "Mist") {
@@ -89,8 +77,6 @@ function setIcon (condition) {
              '</div>';
   
     $( "#iconCurrentWeather" ).empty().append(fog);
-    // console.log("condition=" + condition); 
-    // $("body").removeClass().addClass("fogmist"); 
     $("#moosicPlayer").empty().append('<iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/373457591&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>');
   }
     

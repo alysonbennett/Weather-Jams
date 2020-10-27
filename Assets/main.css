@@ -3,8 +3,7 @@
 * {
   font-family: 'Fira Sans Condensed', sans-serif; 
   color: #fff;
-  /* background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv"); */
-}
+  }
 
 /*Weather Jams Heading*/
 .title {
@@ -29,46 +28,18 @@ body {
   
 }
 .body {
-  /* background-color: #bbbbbb;
-  opacity: 0.5; */
   background-color:rgba(0, 0, 0, 0.7);
 
 }
 
 
-/*Backgrounds*/
+/*Background Image Default*/
 
 .default {
   background-image: url("https://media.giphy.com/media/qae8CsFShKsXC/giphy.gif");
   background-size: cover;
   
 }
-/* .cloudybg {
-  background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv");
-  background-size: cover;
-}
-
-.snowybg {
-  background-image: url("https://64.media.tumblr.com/tumblr_m92lu1fvYU1rt04f0o1_400.gifv");
-  background-size: cover;
-}
-.rainybg {
-  background-image: url("https://media2.giphy.com/media/l3vRbNFMuFt5Zm372/giphy.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.fogmist {
-  background-image: url("https://media3.giphy.com/media/3og0IEX4WDuOggvpS0/giphy.gif");
-  background-size: cover;
-}
-.sunnybg {
-  background-image: url("https://media.giphy.com/media/QwtMHd2Z8dlb5FFIdq/giphy.gif");
-  background-size: cover;
-}
-.stormybg {
-  background-image: url("https://media.giphy.com/media/CIYF0RVOmd2qQ/giphy.gif");
-  background-size: cover;
-} */
 
 /*Search functions*/
 h1 {
@@ -86,12 +57,8 @@ a {
 p { margin: 1.375rem 0; }
 
 .icon {
-  /* position: relative; */
-  /* display: inline-block; */
   width: 12em;
   height: 10em;
-  /* font-size: 1em; control icon size here */
-  /* margin: 25px; */
 }
 html { box-sizing: border-box; }
 html *,
@@ -489,15 +456,6 @@ p { margin: 1.375rem 0; }
 
 }
 
-#musicDrizzle,
-#musicRain,
-#musicAtmosphere,
-#musicClear,
-#musicThunderstorm,
-#musicSnow,
-#musicClouds {
-  display: none;
-}
 
 
 
