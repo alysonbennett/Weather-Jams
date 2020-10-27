@@ -17,7 +17,7 @@ function setIcon (condition) {
   }
   
     if (condition === "Clouds") {
-    var cloudy = '<div id="icon cloudy">' +
+    var cloudy = '<div id="icon cloudy" class="mt-6">' +
                   '<div class="cloud"></div>'+
                   '<div class="cloud"></div>'+
                   '</div>';

@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width">
   <!-- Bulma Stylesheet -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -29,7 +28,7 @@
 
 <body>
 <!-- App Header -->
-<body>
+<body class="default">
   <div class="body">
       <section class="hero">
         <div class="hero-body-padding-large">
@@ -63,34 +62,43 @@
   <button onClick="window.location.reload();" type="button" class="button is-light button  is-small" >Refresh Page
   </button>
 </form>
+<p id= "intro">Search for a city or use your current location to get a customized playlist based on the current weather conditions</p>
 
   <br>
 
 
 <!-- Weather Information Display -->
-<h2 id="place" class="has-text-white"></h2>
+<div class="columns">
+  <div class="column">
+      <div class="scection is-clearfix">
+        <!-- <div id="iconCurrentWeather" class="is-pulled-right"></div> -->
+        <h2 id="place" class="has-text-white"></h2>
 
-<div id="currentDate" class="has-text-white mb-6"></div>
-</br>
+        <div id="currentDate" class="has-text-white"></div>
 
-<div id="iconCurrentWeather" class="container">
-<p id= "intro">Search for a city or use your current location to get a customized playlist based on the current weather conditions</p>
+        <div id="currentTemperature" class="has-text-white"></div>
 
+        <div id="weatherDescription" class="has-text-white"></div>
+
+        <div id="humidity" class="has-text-white"></div>
+        </class>
+        <div id="wind" class="has-text-white"></div>
+      </div>
+  </div>
+  <div class="column">
+      <div id="iconCurrentWeather" class="mt-auto"></div>
+  </div>
+  <div class="column">
+    <div id="quote" class="mt-2 mr-2"></div>
 </div>
-
-<div id="currentTemperature" class="has-text-white mt-6"></div>
-
-<div id="weatherDescription" class="has-text-white"></div>
-
-<div id="humidity" class="has-text-white"></div>
-</class>
-<div id="wind" class="has-text-white"></div>
+</div>
+  
 
 
 <!-- Music -->
 
 <div id="moosicPlayer"></div>
-  <br>
+  
 
   <!-- Footer -->
 

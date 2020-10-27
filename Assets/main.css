@@ -6,11 +6,6 @@
   /* background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv"); */
 }
 
-/*Hiding icons and playlist*/
-.hide {
-  display: none;
-}
-
 /*Weather Jams Heading*/
 .title {
   text-align: center;
@@ -41,6 +36,12 @@ body {
 
 
 /*Backgrounds*/
+
+.default {
+  background-image: url("https://media.giphy.com/media/qae8CsFShKsXC/giphy.gif");
+  background-size: cover;
+  
+}
 .cloudybg {
   background-image: url("https://64.media.tumblr.com/4044331bcf8e7582ac293e9ddbe29364/tumblr_prel752kFM1unfdido1_400.gifv");
   background-size: cover;
@@ -176,7 +177,7 @@ p { margin: 1.375rem 0; }
 }
 
 .cloud {
-  position: absolute;
+  position: relative;
   z-index: 1;
   top: 50%;
   left: 50%;

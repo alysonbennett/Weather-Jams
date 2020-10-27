@@ -1,5 +1,27 @@
 var gifKey = "EpDzh9Dsr3OzGQ5SJOd1EIPs3Y36wth1"
 
+$("#sub").click(function() {
+  $("#intro").hide();
+  $("#quote").empty();
+  fetch("https://type.fit/api/quotes")
+  .then(function(response) {
+  return response.json();
+})
+.then(function(data) {
+  console.log(data);
+  console.log(data[ Math.floor(Math.random() * data.length) ]);
+  
+  var obj = data[ Math.floor(Math.random() * data.length) ];
+  console.log(obj.text, obj.author)
+  var quoteDiv = document.createElement("div")
+  quoteDiv.innerHTML = obj.text;
+  $("#quote").append(quoteDiv);
+  var authorDiv = document.createElement("div2")
+  authorDiv.innerHTML = obj.author;
+  $("#quote").append(authorDiv);
+});
+});
+
 let today = moment().format("dddd, MMMM D, YYYY");
 
 function handleSubmit(event) {
