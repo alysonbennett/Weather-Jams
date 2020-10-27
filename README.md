@@ -56,6 +56,7 @@ This is what the user will first see when opening the application:
 ![Landing Page](Assets/Images/ScreenShots/LandingPage.png)
 
 This is what shows after the user either allows current location or searches for a location: 
+
 ![Searched Location](Assets/Images/ScreenShots/SearchedCity.png)
 
 ## Final Thoughts
