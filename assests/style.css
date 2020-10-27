@@ -147,7 +147,7 @@ p { margin: 1.375rem 0; }
 
 
 .footer {
-  background-color:darkgrey;
+  background-color:rgba(0, 0, 0, 0.7);
   max-height: min-content;
 }
 
